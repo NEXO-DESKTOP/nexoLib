@@ -24,6 +24,17 @@ body {
 
 }
 
+main{
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  margin: 0;
+  overflow: scroll;
+}
+
 /* Botones */
 
 button {
@@ -43,6 +54,12 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.barButton{
+  width: 32px;
+  padding: 0;
+
 }
 
 /* Ventana */
@@ -106,35 +123,32 @@ button {
 }
 
   
-#winButtons button:hover #minbtn {
-  background-color: rgba(10, 92, 255, 0.837);
-}
+#winButtons{
 
-#winButtons button:hover #maxbtn {
-  background-color: rgba(24, 182, 24, 0.881);
-}
+    #minbtn:hover{
+      background-color: rgb(68, 118, 218);
+      color: white;
+      transition: all 0.2s;
+    }
+    #resbtn:hover {
+      background-color: rgba(34, 146, 34, 0.881);
+      color: white;
+      transition: all 0.2s;
+    }
+    #closebtn:hover {
+      background-color: rgba(255, 0, 0, 0.881);
+      color: white;
+      transition: all 0.2s;
+    }
 
-#winButtons button:hover #closebtn {
-  background-color: rgba(255, 0, 0, 0.881);
-}
 
-#winButtons button:hover {
-  transition: all 0.2s;
-}
-
-#winButtons button:active {
-  #minbtn{
-    background-color: rgba(5, 71, 204, 0.837);
-  }
-  #maxbtn{
-    background-color: rgba(20, 150, 20, 0.881);
-  }
-  #closebtn{  
-    background-color: rgba(191, 2, 2, 0.881);
-  }
-  transition: all 0.2s;
 
 }
+
+
+
+
+
 
   /* - Sectores - */
 
@@ -173,6 +187,32 @@ button {
   display: flex;
   justify-content: right;
   padding: 0 4px;
-  align-items: center;}
+  align-items: center;
+}
 
+/* - Menu Contextual - */
+.context-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 150px;
+}
+
+.context-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.context-menu-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.context-menu-item:hover {
+  background-color: #f0f0f0;
+}
 

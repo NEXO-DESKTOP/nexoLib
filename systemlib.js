@@ -1,5 +1,7 @@
 Neutralino.init()
 
+
+
 function onWindowClose() {
     Neutralino.app.exit();
 }
@@ -55,7 +57,33 @@ document.getElementById('closebtn').addEventListener('click', () => {
 
 
 
-// document.addEventListener('contextmenu', (e) => {
-//     e.preventDefault(); 
-//});
+document.addEventListener('contextmenu', (e) => {
+     e.preventDefault(); 
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contextMenu = document.getElementById('context-menu');
+    const contextMenuItems = document.querySelectorAll('.context-menu-item');
+
+    // Mostrar el menú contextual
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+        contextMenu.style.top = `${event.pageY}px`;
+        contextMenu.style.left = `${event.pageX}px`;
+        contextMenu.style.display = 'block';
+    });
+
+    // Ocultar el menú contextual al hacer clic en cualquier otro lugar
+    document.addEventListener('click', function() {
+        contextMenu.style.display = 'none';
+    });
+
+    // Agregar funcionalidad a las opciones del menú
+    contextMenuItems.forEach(function(item) {
+        item.addEventListener('click', function(event) {
+            alert(`Seleccionaste ${event.target.textContent}`);
+            contextMenu.style.display = 'none';
+        });
+    });
+});
 

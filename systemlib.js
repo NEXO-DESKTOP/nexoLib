@@ -1,4 +1,5 @@
-Neutralino.init()
+Neutralino.init();
+
 
 
 
@@ -50,16 +51,24 @@ document.getElementById('closebtn').addEventListener('click', () => {
       console.log('minimize');
   });
 
+
+
   document.getElementById('resbtn').addEventListener('click', () => {resizemain()});
+
+
+    
 
   document.getElementById('appBar').addEventListener('dblclick', () => {resizemain()});
 
 
 
 
-document.addEventListener('contextmenu', (e) => {
-     e.preventDefault(); 
-});
+
+//document.addEventListener('contextmenu', (e) => {
+//     e.preventDefault(); 
+//});
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const contextMenu = document.getElementById('context-menu');
@@ -77,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function() {
         contextMenu.style.display = 'none';
     });
+    
 
     // Agregar funcionalidad a las opciones del menú
     contextMenuItems.forEach(function(item) {

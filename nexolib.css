@@ -21,7 +21,14 @@ body {
 }
 
 h1{
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Yeseva One','Times New Roman', Times, serif;
+  font-weight: 300;
+  font-size: 2.5em;
+}
+
+h2{
+  padding-top: 0;
+  margin-top: 0;
 }
 
 
@@ -259,7 +266,7 @@ button:active {
   left: 0;
   top: 50px;
   bottom: 0;
-  width: 200px;
+  width: 260px;
   background-color: rgb(239, 239, 239);
   display: flex;
   flex-direction: column;
@@ -286,14 +293,14 @@ button:active {
 }
 .rightContent_narrow{
   position: fixed;
-  right: 0;
   top: 50px;
+  left: 260px;
   bottom: 0;
+  z-index: -1000 ;
   padding: 0 20px;
   height: 100%;
-  width: calc(100vw - 200px);
+  width: calc(100vw - 260px);
   height: calc(100vh - 50px);
-  left: 200px;
   background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
@@ -304,6 +311,8 @@ button:active {
   scroll-behavior: smooth;
   margin: 0;
   border: 0;
+  padding-bottom: 20px;
+
 
 }
 
@@ -361,9 +370,9 @@ transition: all 0.2s;
 .bigCard{
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(200, 200, 200);
-  border-radius: 10px;
+  border-radius: 20px;
   margin-left: -40px;
-  padding: 10px;
+  padding: 20px;
   place-self: center;
   display: flex;
   width: 80%;
@@ -371,24 +380,27 @@ transition: all 0.2s;
   gap: 10px;
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.114);
 }
-.bigCard:hover{
-  background-color:rgb(218, 68, 153);
+.canOpen:hover{
+  background-color:rgb(224, 224, 224);
   transition: all 0.2s;
-  color: white;
-  transform: scale(1.1);
+  color: black;
+  transform: scale(1.01);
 }
-.canOpen{
+.canOpen:active{
 background-color: #000000;
 color: white;
 transform: scale(0.9);
 transition: all 0.2s;
 }
+
+
 .cardContainer{
+  padding-top: 30px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  align-items: center;
+  align-items: top;
   margin: 0;
   width: 100%;
   height: 100%;
@@ -401,7 +413,7 @@ transition: all 0.2s;
 .card{
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(200, 200, 200);
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -409,25 +421,41 @@ transition: all 0.2s;
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.114);
   transition: all 0.2s;
   margin-left: -20px;
-  width: 160px;
+  width: 200px;
+  height: 50px;
 }
 .card:hover{
   background-color:rgb(218, 68, 153);
   transition: all 0.2s;
   color: white;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .verticalCard{
   display: flex;
   flex-direction: column;
   transition: all 0.2s;
 }
+.hBox{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  h2{
+    justify-self: left;
+    text-align: left;
+  }
+  .sIcons{
+    font-size: 1.8em;
+    justify-self: right;
+    text-align: right;
+
+  }
+}
 .cardDescription{
-  font-size:8px;
+  font-size:12px;
   font-weight: 200;
   color: rgb(100, 100, 100);
   padding-top: 0;
-  margin-top: -10px;
+  margin-top: -20px;
 }
 .cardTitle{
   font-size: 18px;
